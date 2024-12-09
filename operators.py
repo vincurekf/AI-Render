@@ -308,7 +308,7 @@ def validate_and_process_animated_prompt_text(scene):
         negative_lines = []
 
     def parse_lines(lines, is_positive=True):
-        r = re.compile('^(\d+):(.*)')
+        r = re.compile('^(\\d+):(.*)')
         lines = list(filter(r.match, lines))
 
         processed_lines = []

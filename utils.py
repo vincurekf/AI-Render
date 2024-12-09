@@ -385,7 +385,7 @@ def has_url(text, strict_match_protocol=False):
     url_in_markup_regex = "http[s]?://[^)]+"
 
     # first look for markup urls
-    markup_regex = f"\[({name_regex})]\(\s*({url_in_markup_regex})\s*\)"
+    markup_regex = f"\\[({name_regex})]\\(\\s*({url_in_markup_regex})\\s*\\)"
 
     urls = re.findall(markup_regex, text, re.IGNORECASE)
 
